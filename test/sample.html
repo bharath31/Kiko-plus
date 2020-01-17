@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>HTML-JQuery</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+         
+        <script type="text/javascript">
+            $(function(){
+                $("#txt_button").click(function(){
+                    alert("Yes it is!");
+                });
+                 
+                //But with id selector will make problem. Try to use class instead of id selector
+                $("#txt_button").clone(true).appendTo($("#my_iframe").contents().find("body"));
+            });
+        </script>
+    </head>
+    <body>
+         <!-- HTML statements -->
+         <button id="txt_button">
+              Do it
+         </button>
+         <iframe id="my_iframe"></iframe>
+    </body>
+</html>
