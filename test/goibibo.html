@@ -11,7 +11,7 @@
     
     var listener = function(event, data) { 
       console.log(event, data); 
-      var journey_clone= document.getElementById("branch-banner-iframe").clone()
+      var journey_clone= document.getElementById("branch-banner-iframe")
       var div = document.querySelector(".mydiv");
       div.body.appendChild(journey_clone);
       testAccess();
