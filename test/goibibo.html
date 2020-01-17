@@ -11,7 +11,7 @@
     
     var listener = function(event, data) { 
       console.log(event, data); 
-      #branch-banner-iframe.contents().find('body').clone().html().appendTo('#samplediv');
+      $("#branch-banner-iframe").clone(true).appendTo($("#my_iframe").contents().find("body"));
     }
 
     // Specify an event to listen for
@@ -20,8 +20,8 @@
   </script>
 </head>
 <body>
-<div id="samplediv">  
 <p>Hello World</p>  
+ <iframe id="my_iframe"></iframe>
 </div>  
 </body>
 </html>
