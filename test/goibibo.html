@@ -11,8 +11,13 @@
     
     var listener = function(event, data) { 
       console.log(event, data); 
+      var journey_clone= document.getElementById("branch-banner-iframe").clone()
+      var div = document.querySelector(".mydiv");
+      div.body.appendChild(journey_clone);
       testAccess();
     }
+    
+
 
     // Specify an event to listen for
     branch.addListener('didShowJourney', listener);
@@ -40,7 +45,9 @@
 </head>
 <body>
 <p>Hello World</p>  
- <iframe id="my_iframe"></iframe>
+ <div class="mydiv">
+
+</div>
 </div>  
 </body>
 </html>
